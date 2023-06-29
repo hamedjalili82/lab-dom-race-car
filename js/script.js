@@ -12,7 +12,7 @@ window.onload = function () {
       "ArrowDown",
     ];
 
-    if (possibleKeystrokes.includes(key)) {
+    if (possibleKeystrokes.includes(key)) {3
       event.preventDefault();
 
       switch (key) {
@@ -44,5 +44,22 @@ window.onload = function () {
 
     game.start();
   }
-  window.addEventListener("keydown", handleKeydown);
-};
+    window.addEventListener("keydown", handleKeydown);
+
+
+
+    // if (possibleKeystrokes.includes(key)) {3
+    //   event.preventDefault();
+
+    //   switch (key) {
+    //     case "ArrowLeft":
+    //     case "ArrowRight":
+    //         game.player.directionX = 0;
+    //         break;
+       
+    //     case "ArrowUp":
+    //     case "ArrowDown":
+    //       game.player.directionY = 0;
+    //       break;
+    //   }
+}

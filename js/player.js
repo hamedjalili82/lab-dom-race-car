@@ -12,10 +12,10 @@ class Player {
         this.element = new Image();
         this.element.src = imageSrc;
         this.element.style.position = 'absolute';
-        this.element.style.width = '${width}px';
-        this.element.style.height = '${height}px';
-        this.element.style.left = '${left}px';
-        this.element.style.top = '${top}px';
+        this.element.style.width = `${this.width}px`;
+        this.element.style.height = `${this.height}px`;
+        this.element.style.left = `${this.left}px`;
+        this.element.style.top = `${this.top}px`;
 
         this.gameScreen.appendChild(this.element);
     }
@@ -32,8 +32,8 @@ move() {
         this.top = 10;
       }
     
-      if (this.left > this.gameScreen.offsetWidth - this.width - 10) {
-        this.left = this.gameScreen.offsetWidth - this.width - 10;
+      if (this.left > this.gameScreen.offsetWidth - this.width - 40) {
+        this.left = this.gameScreen.offsetWidth - this.width - 40;
       }
     
       if (this.top > this.gameScreen.offsetHeight - this.height - 10) {

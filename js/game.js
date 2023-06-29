@@ -14,7 +14,7 @@ class Game {
           );
         this.height = 600;
         this.width = 500;
-        this.obstacles = [];
+        this.obstacles = [new Obstacle(this.gameScreen)];
         this.score = 0;
         this.lives = 3;
         this.gameIsOver = false;
@@ -38,6 +38,10 @@ gameLoop () {
 
     this.update();
 
+    if (Math.random() > 0.98 && this.obstacles.length < 1 {
+        this.obstacles.push(new Obstacle(this.gameScreen))
+    }
+
     window.requestAnimationFrame(() => {
         this.gameLoop();
     }) 
@@ -45,6 +49,21 @@ gameLoop () {
 
 update () {
     this.player.move();
+    const obstaclesToKeep = [];
+    this.obstacles.forEach(obstacle => {
+        obstacle.move()
+        if (this.player.didCollide(obstacle)){
+            console.log('collision')
+            obstacle.element.remove(); 
+        } else if (obstacle.top > this.gameScreen.offsetHeight) {
+            console.log('out of screen')
+        } else {
+            obstaclesToKeep.push(obstacle)
+        }
+        // this.gameIsOver = 
+    })
+    this.obstacles = obstaclesToKeep;
+    
 }
 
 
